@@ -3,6 +3,7 @@ package main.java.com.imdcorp.util;
 import main.java.com.imdcorp.enums.Gender;
 import main.java.com.imdcorp.enums.Level;
 import main.java.com.imdcorp.enums.Training;
+import main.java.com.imdcorp.model.ADMTechnician;
 import main.java.com.imdcorp.model.Address;
 import main.java.com.imdcorp.model.Teacher;
 
@@ -136,6 +137,27 @@ public class Create {
             System.out.print(">>> Digite o departamento: ");
             String department = scanner.nextLine();
 
+            Integer workload = null;
+            while (workload == null) {
+                try {
+                    System.out.print(">>> Digite a carga horária: ");
+                    workload = Integer.parseInt(scanner.nextLine());
+                } catch (NumberFormatException e) {
+                    System.out.println("ERRO > Carga horária inválida. Tente novamente.");
+                }
+            }
+
+            LocalDate entryDate = null;
+            while (entryDate == null) {
+                try {
+                    System.out.print(">>> Digite a data de contratação (formato yyyy-MM-dd): ");
+                    String entryDateInput = scanner.nextLine();
+                    entryDate = LocalDate.parse(entryDateInput, DateTimeFormatter.ISO_DATE);
+                } catch (DateTimeParseException e) {
+                    System.out.println("ERRO > Formato de data inválido. Tente novamente.");
+                }
+            }
+
             Level level = null;
             while (level == null) {
                 try {
@@ -175,12 +197,19 @@ public class Create {
                 subjects.add(subject.trim());
             }
 
-            return new Teacher(level, teacherTraining, subjects, name, CPF, dateBirth, gender, address, enrollment, salary, department);
+            return new Teacher(level, teacherTraining, subjects, name, CPF, dateBirth, gender,
+                               address, enrollment, salary, department, workload, entryDate);
 
         }
         catch (Exception e) {
             System.out.println("ERROR > Ocorreu um erro inesperado: " + e.getMessage());
             return null;
         }
+    }
+
+
+    // TODO: Implement the register of technician.
+    public ADMTechnician createTechnician() {
+        return null;
     }
 }

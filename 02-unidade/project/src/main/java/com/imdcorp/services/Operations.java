@@ -1,6 +1,7 @@
 package main.java.com.imdcorp.services;
 
 import main.java.com.imdcorp.dao.DataDAO;
+import main.java.com.imdcorp.model.ADMTechnician;
 import main.java.com.imdcorp.model.Teacher;
 import main.java.com.imdcorp.util.FileUtils;
 import main.java.com.imdcorp.util.Create;
@@ -35,10 +36,12 @@ public class Operations {
     }
 
     /**
-     *
+     * Creates and save a new technician.
      */
     public void registerADMTechnician() {
-        // TODO: Implements the register of technician.
+        System.out.println(" +++ Cadastro de Técnico +++ ");
+        Create create = new Create();
+        ADMTechnician newTechnician = create.createTechnician();
     }
 
     /**

@@ -20,8 +20,8 @@ public class Teacher extends People implements Functionary, Serializable {
     public Teacher(Level level, Training teacherTraining, List<String> subjects,
                    String name, String CPF, LocalDate dateBirth,
                    Gender gender, Address address, Long enrollment,
-                   Double salary, String department) {
-        super(name, CPF, dateBirth, gender, address, enrollment, salary, department);
+                   Double salary, String department, Integer workload, LocalDate entryDate) {
+        super(name, CPF, dateBirth, gender, address, enrollment, salary, department, workload, entryDate);
         this.teacherLevel = level;
         this.teacherTraining = teacherTraining;
         this.subjects = subjects;
@@ -57,6 +57,8 @@ public class Teacher extends People implements Functionary, Serializable {
                 "Gênero: " + getGender() + "\n" +
                 "Salario: " + getSalary() + "\n" +
                 "Departmento: " + getDepartment() + "\n" +
+                "Carga horária: " + getWorkload() + "\n" +
+                "Data de Ingresso: " + getEntryDate() + "\n" +
                 "---------------------------\n" +
                 "Nível: " + teacherLevel + "\n" +
                 "Formação: " + teacherTraining + "\n" +

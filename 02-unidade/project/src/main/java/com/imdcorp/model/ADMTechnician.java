@@ -20,8 +20,8 @@ public class ADMTechnician extends People implements Functionary, Serializable {
     public ADMTechnician(Level technicianLevel, Training technicianTraining, Boolean insalubrious, Boolean rewardedFunction,
                          String name, String CPF, LocalDate dateBirth,
                          Gender gender, Address address, Long enrollment,
-                         Double salary, String department) {
-        super(name, CPF, dateBirth, gender, address, enrollment, salary, department);
+                         Double salary, String department, Integer workload, LocalDate entryDate) {
+        super(name, CPF, dateBirth, gender, address, enrollment, salary, department, workload, entryDate);
         this.technicianLevel = technicianLevel;
         this.technicianTraining = technicianTraining;
         this.insalubrious = insalubrious;

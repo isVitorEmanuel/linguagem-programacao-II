@@ -14,13 +14,15 @@ public abstract class People implements Serializable {
     private Long enrollment;
     private Double salary;
     private String department;
+    private Integer workload;
+    private LocalDate entryDate;
 
     /**
      * Constructor.
      */
     public People(String name, String CPF, LocalDate dateBirth,
                   Gender gender, Address address, Long enrollment,
-                  Double salary, String department) {
+                  Double salary, String department, Integer workload, LocalDate entryDate) {
         this.name = name;
         this.CPF = CPF;
         this.dateBirth = dateBirth;
@@ -42,6 +44,8 @@ public abstract class People implements Serializable {
     public Long getEnrollment() { return this.enrollment; }
     public Double getSalary() { return this.salary; }
     public String getDepartment() { return this.department; }
+    public Integer getWorkload() { return this.workload; }
+    public LocalDate getEntryDate() { return this.entryDate; }
 
     /**
      * Setters.
@@ -54,4 +58,6 @@ public abstract class People implements Serializable {
     public void setEnrollment(Long enrollment) { this.enrollment = enrollment; }
     public void setSalary(Double salary) { this.salary = salary; }
     public void setDepartment(String department) { this.department = department; }
+    public void setWorkload(Integer workload) { this.workload = workload; }
+    public void setEntryDate(LocalDate entryDate) { this.entryDate = entryDate; }
 }
