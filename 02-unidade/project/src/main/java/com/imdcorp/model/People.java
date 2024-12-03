@@ -1,10 +1,11 @@
-package main.java.com.imdcorp.interfaces.model;
+package main.java.com.imdcorp.model;
 
-import main.java.com.imdcorp.interfaces.enums.Gender;
+import main.java.com.imdcorp.enums.Gender;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public abstract class People {
+public abstract class People implements Serializable {
     private String name;
     private String CPF;
     private LocalDate dateBirth;
@@ -13,6 +14,22 @@ public abstract class People {
     private Long enrollment;
     private Double salary;
     private String department;
+
+    /**
+     * Constructor.
+     */
+    public People(String name, String CPF, LocalDate dateBirth,
+                  Gender gender, Address address, Long enrollment,
+                  Double salary, String department) {
+        this.name = name;
+        this.CPF = CPF;
+        this.dateBirth = dateBirth;
+        this.gender = gender;
+        this.address = address;
+        this.enrollment = enrollment;
+        this.salary = salary;
+        this.department = department;
+    }
 
     /**
      * Getters.
