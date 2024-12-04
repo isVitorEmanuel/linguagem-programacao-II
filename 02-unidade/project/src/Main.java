@@ -9,7 +9,7 @@ public class Main {
         int option;
 
         do {
-            System.out.println("================= Menu ===============");
+            System.out.println("========================= Menu ======================");
             System.out.println("[1] Cadastrar Professor");
             System.out.println("[2] Cadastrar Técnico");
             System.out.println("[3] Listar Professores");
@@ -21,17 +21,18 @@ public class Main {
             System.out.println("[0] Sair");
             System.out.print("Escolha uma opção: ");
             option = scanner.nextInt();
+            System.out.println("=====================================================");
 
             switch (option) {
                 case 1 -> operations.registerTeacher();
-                case 2 -> System.out.println("Cadastrartecnicosssor");
+                case 2 -> operations.registerADMTechnician();
                 case 3 -> operations.listTeachers();
-                case 4 -> System.out.println("Listar Técnicos");
-                case 5 -> System.out.println("Buscar Professor");
-                case 6 -> System.out.println("Buscar ténciso");
-                case 7 -> System.out.println("Deletar Professor");
-                case 8 -> System.out.println("Deletar técnico");
-                case 0 -> System.out.println("Sair");
+                case 4 -> operations.listADMTechnicians();
+                case 5 -> operations.searchTeacher();
+                case 6 -> operations.searchADMTechnician();
+                case 7 -> operations.deleteTeacher();
+                case 8 -> operations.deleteTechnician();
+                case 0 -> System.out.println("Saindo do Sistema...");
                 default -> System.out.println(">>> Opção inválida!");
             }
         } while (option != 0);

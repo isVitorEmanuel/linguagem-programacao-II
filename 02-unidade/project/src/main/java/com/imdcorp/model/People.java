@@ -31,6 +31,8 @@ public abstract class People implements Serializable {
         this.enrollment = enrollment;
         this.salary = salary;
         this.department = department;
+        this.workload = workload;
+        this.entryDate = entryDate;
     }
 
     /**

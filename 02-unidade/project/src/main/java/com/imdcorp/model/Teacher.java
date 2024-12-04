@@ -60,10 +60,10 @@ public class Teacher extends People implements Functionary, Serializable {
                 "Carga horária: " + getWorkload() + "\n" +
                 "Data de Ingresso: " + getEntryDate() + "\n" +
                 "---------------------------\n" +
-                "Nível: " + teacherLevel + "\n" +
-                "Formação: " + teacherTraining + "\n" +
+                "Nível: " + getLevel() + "\n" +
+                "Formação: " + getTeacherTraining() + "\n" +
                 "Endereço: \n" + getAddress() +
-                "Disciplinas: " + String.join(", ", subjects) + "\n" +
+                "Disciplinas: " + String.join(", ", getSubjects()) + "\n" +
                 "---------------------------";
     }
 
