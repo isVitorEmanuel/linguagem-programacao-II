@@ -40,7 +40,7 @@ public class Operations {
      * Creates and save a new technician.
      */
     public void registerADMTechnician() {
-        System.out.println(" +++ Cadastro de Técnico +++ ");
+        System.out.println("++++++++++++++ Cadastro de Técnico +++++++++++++++");
         Utils utils = new Utils();
         ADMTechnician newTechnician = utils.createTechnician();
         dataDAO.getFunctionaries().add(newTechnician);
@@ -50,7 +50,7 @@ public class Operations {
      * Iterate in functionaries from dataDAO and list all teachers.
      */
     public void listTeachers() {
-        System.out.println(">>> Listar Professores: ");
+        System.out.println("++++++++++++++ Listar Professores ++++++++++++++");
         dataDAO.getFunctionaries().forEach(people -> {
             if (people instanceof Teacher teacher) {
                 System.out.println("- " + teacher.getName() + " (Mat: "+ teacher.getEnrollment() +")");
@@ -62,7 +62,7 @@ public class Operations {
      * Iterate in functionaries from dataDAO and list all technicians.
      */
     public void listADMTechnicians() {
-        System.out.println(">>> Listar Técnicos: ");
+        System.out.println("++++++++++++++ Listar Técnicos ++++++++++++++");
         dataDAO.getFunctionaries().forEach(people -> {
             if (people instanceof ADMTechnician technician) {
                 System.out.println("- " + technician.getName() + " (Mat: "+ technician.getEnrollment() +")");
@@ -74,7 +74,7 @@ public class Operations {
      * Method to search for a teacher by enrollment number.
      */
     public void searchTeacher() {
-        System.out.println(">>> Buscar Professor: ");
+        System.out.println("++++++++++++++ Buscar Professor ++++++++++++++");
 
         Long enrollment = Utils.getEnrollmentFromUser();
 
@@ -98,7 +98,7 @@ public class Operations {
      * Method to search for a ADM technician by enrollment number.
      */
     public void searchADMTechnician() {
-        System.out.println(">>> Buscar Técnico: ");
+        System.out.println("++++++++++++++ Buscar Técnico  ++++++++++++++");
 
         Long enrollment = Utils.getEnrollmentFromUser();
 
@@ -119,7 +119,7 @@ public class Operations {
     }
 
     public void deleteTeacher() {
-        System.out.println(">>> Deletar Professor: ");
+        System.out.println("++++++++++++++ Deletar Professor ++++++++++++++");
 
         Long enrollment = Utils.getEnrollmentFromUser();
 
@@ -140,7 +140,7 @@ public class Operations {
     }
 
     public void deleteTechnician() {
-        System.out.println(">>> Deletar Técnico: ");
+        System.out.println("++++++++++++++ Deletar Técnico ++++++++++++++");
 
         Long enrollment = Utils.getEnrollmentFromUser();
 

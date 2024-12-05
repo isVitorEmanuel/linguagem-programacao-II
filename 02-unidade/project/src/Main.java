@@ -19,9 +19,10 @@ public class Main {
             System.out.println("[7] Deletar Professor");
             System.out.println("[8] Deletar Técnico");
             System.out.println("[0] Sair");
-            System.out.print("Escolha uma opção: ");
+            System.out.print(">>> Escolha uma opção: ");
             option = scanner.nextInt();
             System.out.println("=====================================================");
+
 
             switch (option) {
                 case 1 -> operations.registerTeacher();

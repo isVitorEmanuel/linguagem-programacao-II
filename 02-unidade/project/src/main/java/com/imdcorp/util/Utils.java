@@ -344,7 +344,7 @@ public class Utils {
 
             Boolean isInsalubrius = null;
             while (isInsalubrius == null) {
-                System.out.println(">>> Possui insalubridade? (S / N): ");
+                System.out.print(">>> Possui insalubridade? (S / N): ");
                 String insalubriousInput = scanner.nextLine();
 
                 if (insalubriousInput.equalsIgnoreCase("S")) { isInsalubrius = true; }
@@ -356,7 +356,7 @@ public class Utils {
 
             Boolean rewardFunction = null;
             while (rewardFunction == null) {
-                System.out.print(">>> Possui reward? (S / N): ");
+                System.out.print(">>> Possui bônus? (S / N): ");
                 String rewardFunctionInput = scanner.nextLine();
 
                 if (rewardFunctionInput.equalsIgnoreCase("S")) { rewardFunction = true; }
@@ -386,10 +386,10 @@ public class Utils {
 
         while (enrollment == null) {
             try {
-                System.out.print("      >> Digite o número de matrícula: ");
+                System.out.print(">>> Digite o número de matrícula: ");
                 enrollment = Long.parseLong(scanner.nextLine());
             } catch (NumberFormatException e) {
-                System.out.println("        ERRO > Número de matrícula inválido. Tente novamente.");
+                System.out.println("ERRO > Número de matrícula inválido. Tente novamente.");
             }
         }
 
