@@ -34,6 +34,7 @@ public class Operations {
         Utils utils = new Utils();
         Teacher newTeacher = utils.createTeacher();
         dataDAO.getFunctionaries().add(newTeacher);
+        System.out.println(">>> Professor cadastrado com sucesso!");
     }
 
     /**
@@ -44,6 +45,7 @@ public class Operations {
         Utils utils = new Utils();
         ADMTechnician newTechnician = utils.createTechnician();
         dataDAO.getFunctionaries().add(newTechnician);
+        System.out.println(">>> Técnico cadastrado com sucesso!");
     }
 
     /**
@@ -51,11 +53,19 @@ public class Operations {
      */
     public void listTeachers() {
         System.out.println("++++++++++++++ Listar Professores ++++++++++++++");
-        dataDAO.getFunctionaries().forEach(people -> {
+
+        boolean isEmpty = true;
+
+        for (People people : dataDAO.getFunctionaries()) {
             if (people instanceof Teacher teacher) {
                 System.out.println("- " + teacher.getName() + " (Mat: "+ teacher.getEnrollment() +")");
+                isEmpty = false;
             }
-        });
+        }
+
+        if (isEmpty) {
+            System.out.println(">>> Não foram encontrados professores.");
+        }
     }
 
     /**
@@ -63,11 +73,19 @@ public class Operations {
      */
     public void listADMTechnicians() {
         System.out.println("++++++++++++++ Listar Técnicos ++++++++++++++");
-        dataDAO.getFunctionaries().forEach(people -> {
+
+        boolean isEmpty = true;
+
+        for (People people : dataDAO.getFunctionaries()) {
             if (people instanceof ADMTechnician technician) {
                 System.out.println("- " + technician.getName() + " (Mat: "+ technician.getEnrollment() +")");
+                isEmpty = false;
             }
-        });
+        }
+
+        if (isEmpty) {
+            System.out.println(">>> Técnicos não foram encontrados!");
+        }
     }
 
     /**
@@ -118,6 +136,9 @@ public class Operations {
         }
     }
 
+    /**
+     * This method searches for a teacher by registration, if it is deleted, otherwise it informs that it was not found.
+     */
     public void deleteTeacher() {
         System.out.println("++++++++++++++ Deletar Professor ++++++++++++++");
 
@@ -128,6 +149,7 @@ public class Operations {
             if (functionary instanceof Teacher) {
                 if (functionary.getEnrollment().equals(enrollment)) {
                     dataDAO.getFunctionaries().remove(functionary);
+                    System.out.println(">>> Professor excluído com sucesso!");
                     found = true;
                     break;
                 }
@@ -139,6 +161,9 @@ public class Operations {
         }
     }
 
+    /**
+     * This method searches for a technician by registration, if it is deleted, otherwise it informs that it was not found.
+     */
     public void deleteTechnician() {
         System.out.println("++++++++++++++ Deletar Técnico ++++++++++++++");
 
@@ -149,6 +174,7 @@ public class Operations {
             if (functionary instanceof ADMTechnician) {
                 if (functionary.getEnrollment().equals(enrollment)) {
                     dataDAO.getFunctionaries().remove(functionary);
+                    System.out.println(">>> Técnico excluído com sucesso!");
                     found = true;
                     break;
                 }

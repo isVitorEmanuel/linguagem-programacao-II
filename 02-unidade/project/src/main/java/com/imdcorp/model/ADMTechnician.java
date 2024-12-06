@@ -6,6 +6,7 @@ import main.java.com.imdcorp.enums.Training;
 import main.java.com.imdcorp.interfaces.Functionary;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 
 public class ADMTechnician extends People implements Functionary, Serializable {
@@ -26,6 +27,7 @@ public class ADMTechnician extends People implements Functionary, Serializable {
         this.technicianTraining = technicianTraining;
         this.insalubrious = insalubrious;
         this.rewardedFunction = rewardedFunction;
+        this.setSalary(this.calculateSalary());
     }
 
     /**
@@ -46,6 +48,41 @@ public class ADMTechnician extends People implements Functionary, Serializable {
 
     @Override
     public Double calculateSalary() {
-        return 0.0;
+        Double baseSalary = this.getSalary();
+        Double levelSalary =  baseSalary * Math.pow(1.03, getTechnicianLevel().ordinal());
+
+        switch (getTechnicianTraining()) {
+            case SPECIALIZATION -> levelSalary = levelSalary + (baseSalary * 0.25);
+            case MASTER -> levelSalary = levelSalary + (baseSalary * 0.5);
+            case DOCTORATE -> levelSalary = levelSalary + (baseSalary * 0.75);
+        }
+
+        if (getInsalubrious()) { levelSalary = levelSalary + (baseSalary * 0.5); }
+        if (getRewardedFunction()) { levelSalary = levelSalary + (baseSalary * 0.5); }
+
+        return levelSalary;
+    }
+
+    @Override
+    public String toString() {
+        DecimalFormat dFormat = new DecimalFormat("#.##");
+
+        return  "---- Detalhes do Técnico ----\n" +
+                "-----------------------------\n" +
+                "Nome: " + getName() + "\n" +
+                "CPF: " + getCPF() + "\n" +
+                "Matrícula: " + getEnrollment() + "\n" +
+                "Data de Aniversário: " + getDateBirth() + "\n" +
+                "Gênero: " + getGender() + "\n" +
+                "Salario: R$" + dFormat.format(getSalary()) + "\n" +
+                "Departmento: " + getDepartment() + "\n" +
+                "Carga horária: " + getWorkload() + "h\n" +
+                "Data de Ingresso: " + getEntryDate() + "\n" +
+                "---------------------------\n" +
+                "Nível: " + getTechnicianLevel() + "\n" +
+                "Endereço: \n" + getAddress() +
+                "Insalubridade: " + (getInsalubrious() ? "Sim" : "Não") + "\n" +
+                "Bônus: " + (getRewardedFunction() ? "Sim" : "Não") + "\n" +
+                "-----------------------------";
     }
 }

@@ -86,7 +86,7 @@ public class Utils {
             LocalDate dateBirth = null;
             while (dateBirth == null) {
                 try {
-                    System.out.print(">>> Digite a data de nascimento (formato yyyy-MM-dd): ");
+                    System.out.print(">>> Digite a data de nascimento (YYYY-MM-DD): ");
                     String dateBirthInput = scanner.nextLine();
                     dateBirth = LocalDate.parse(dateBirthInput, DateTimeFormatter.ISO_DATE);
                 } catch (DateTimeParseException e) {
@@ -123,16 +123,6 @@ public class Utils {
                 }
             }
 
-            Double salary = null;
-            while (salary == null) {
-                try {
-                    System.out.print(">>> Digite o salário: ");
-                    salary = Double.parseDouble(scanner.nextLine());
-                } catch (NumberFormatException e) {
-                    System.out.println("ERRO > Valor de salário inválido. Tente novamente.");
-                }
-            }
-
             System.out.print(">>> Digite o departamento: ");
             String department = scanner.nextLine();
 
@@ -149,7 +139,7 @@ public class Utils {
             LocalDate entryDate = null;
             while (entryDate == null) {
                 try {
-                    System.out.print(">>> Digite a data de contratação (formato yyyy-MM-dd): ");
+                    System.out.print(">>> Digite a data de contratação (YYYY-MM-DD): ");
                     String entryDateInput = scanner.nextLine();
                     entryDate = LocalDate.parse(entryDateInput, DateTimeFormatter.ISO_DATE);
                 } catch (DateTimeParseException e) {
@@ -197,11 +187,11 @@ public class Utils {
             }
 
             return new Teacher(level, teacherTraining, subjects, name, CPF, dateBirth, gender,
-                               address, enrollment, salary, department, workload, entryDate);
+                               address, enrollment, 4000.0, department, workload, entryDate);
 
         }
         catch (Exception e) {
-            System.out.println("ERROR > Ocorreu um erro inesperado: " + e.getMessage());
+            System.out.println("ERRO > Ocorreu um erro inesperado: " + e.getMessage());
             return null;
         }
     }
@@ -263,7 +253,7 @@ public class Utils {
                 }
             }
 
-            System.out.println("- - Endereço do técnico: ");
+            System.out.println(">>> Endereço do técnico: ");
             Address address = this.createAddress();
 
             Long enrollment = null;
@@ -273,16 +263,6 @@ public class Utils {
                     enrollment = Long.parseLong(scanner.nextLine());
                 } catch (NumberFormatException e) {
                     System.out.println("ERRO > Número de matrícula inválido. Tente novamente.");
-                }
-            }
-
-            Double salary = null;
-            while (salary == null) {
-                try {
-                    System.out.print(">>> Digite o salário: ");
-                    salary = Double.parseDouble(scanner.nextLine());
-                } catch (NumberFormatException e) {
-                    System.out.println("ERRO > Valor de salário inválido. Tente novamente.");
                 }
             }
 
@@ -302,7 +282,7 @@ public class Utils {
             LocalDate entryDate = null;
             while (entryDate == null) {
                 try {
-                    System.out.print(">>> Digite a data de contratação (formato yyyy-MM-dd): ");
+                    System.out.print(">>> Digite a data de contratação (YYYY-MM-DD): ");
                     String entryDateInput = scanner.nextLine();
                     entryDate = LocalDate.parse(entryDateInput, DateTimeFormatter.ISO_DATE);
                 } catch (DateTimeParseException e) {
@@ -367,7 +347,7 @@ public class Utils {
             }
 
             return new ADMTechnician(level, technicianTraining, isInsalubrius, rewardFunction,
-                                     name, CPF, dateBirth, gender, address, enrollment, salary,
+                                     name, CPF, dateBirth, gender, address, enrollment, 2500.0,
                                      department, workload, entryDate);
         } catch (Exception e) {
             System.out.println("ERROR > Ocorreu um erro inesperado: " + e.getMessage());

@@ -28,7 +28,7 @@ public class FileUtils {
      */
     @SuppressWarnings("unchecked")
     public static ArrayList<People> getFunctionaries(String pathData) {
-        ArrayList<People> functionaries = new ArrayList<>(); // Initialize with an empty list
+        ArrayList<People> functionaries = new ArrayList<>();
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(pathData))) {
             functionaries = (ArrayList<People>) in.readObject();
             System.out.println(">>> Funcionários carregados com sucesso!");

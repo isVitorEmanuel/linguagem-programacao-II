@@ -9,7 +9,7 @@ public class Main {
         int option;
 
         do {
-            System.out.println("========================= Menu ======================");
+            System.out.println("========================= IMDCorp - Menu ======================");
             System.out.println("[1] Cadastrar Professor");
             System.out.println("[2] Cadastrar Técnico");
             System.out.println("[3] Listar Professores");
