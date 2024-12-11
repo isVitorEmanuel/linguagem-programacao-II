@@ -20,7 +20,13 @@ public class Main {
             System.out.println("[8] Deletar Técnico");
             System.out.println("[0] Sair");
             System.out.print(">>> Escolha uma opção: ");
-            option = scanner.nextInt();
+
+            try {
+                option = scanner.nextInt();
+            } catch (Exception e) {
+                option = -1;
+                scanner.nextLine();
+            }
             System.out.println("=====================================================");
 
 
