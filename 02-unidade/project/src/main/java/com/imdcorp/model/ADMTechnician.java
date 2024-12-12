@@ -1,9 +1,9 @@
-package main.java.com.imdcorp.model;
+package com.imdcorp.model;
 
-import main.java.com.imdcorp.enums.Gender;
-import main.java.com.imdcorp.enums.Level;
-import main.java.com.imdcorp.enums.Training;
-import main.java.com.imdcorp.interfaces.Functionary;
+import com.imdcorp.enums.Gender;
+import com.imdcorp.enums.Level;
+import com.imdcorp.enums.Training;
+import com.imdcorp.interfaces.Functionary;
 
 import java.io.Serializable;
 import java.text.DecimalFormat;

@@ -1,6 +1,6 @@
-package main.java.com.imdcorp.dao;
+package com.imdcorp.dao;
 
-import main.java.com.imdcorp.model.People;
+import com.imdcorp.model.People;
 
 import java.util.ArrayList;
 

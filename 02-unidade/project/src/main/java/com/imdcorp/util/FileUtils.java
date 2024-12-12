@@ -1,6 +1,6 @@
-package main.java.com.imdcorp.util;
+package com.imdcorp.util;
 
-import main.java.com.imdcorp.model.People;
+import com.imdcorp.model.People;
 
 import java.io.*;
 import java.util.ArrayList;

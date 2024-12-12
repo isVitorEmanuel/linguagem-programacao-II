@@ -1,11 +1,11 @@
-package main.java.com.imdcorp.services;
+package com.imdcorp.services;
 
-import main.java.com.imdcorp.dao.DataDAO;
-import main.java.com.imdcorp.model.ADMTechnician;
-import main.java.com.imdcorp.model.People;
-import main.java.com.imdcorp.model.Teacher;
-import main.java.com.imdcorp.util.FileUtils;
-import main.java.com.imdcorp.util.Utils;
+import com.imdcorp.dao.DataDAO;
+import com.imdcorp.model.ADMTechnician;
+import com.imdcorp.model.People;
+import com.imdcorp.model.Teacher;
+import com.imdcorp.util.FileUtils;
+import com.imdcorp.util.Utils;
 
 public class Operations {
     private static final DataDAO dataDAO = DataDAO.getInstance();

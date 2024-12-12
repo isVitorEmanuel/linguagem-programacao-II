@@ -1,6 +1,6 @@
-package main.java.com.imdcorp.model;
+package com.imdcorp.model;
 
-import main.java.com.imdcorp.enums.Gender;
+import com.imdcorp.enums.Gender;
 
 import java.io.Serializable;
 import java.time.LocalDate;

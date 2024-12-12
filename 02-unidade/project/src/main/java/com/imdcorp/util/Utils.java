@@ -1,11 +1,11 @@
-package main.java.com.imdcorp.util;
+package com.imdcorp.util;
 
-import main.java.com.imdcorp.enums.Gender;
-import main.java.com.imdcorp.enums.Level;
-import main.java.com.imdcorp.enums.Training;
-import main.java.com.imdcorp.model.ADMTechnician;
-import main.java.com.imdcorp.model.Address;
-import main.java.com.imdcorp.model.Teacher;
+import com.imdcorp.enums.Gender;
+import com.imdcorp.enums.Level;
+import com.imdcorp.enums.Training;
+import com.imdcorp.model.ADMTechnician;
+import com.imdcorp.model.Address;
+import com.imdcorp.model.Teacher;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

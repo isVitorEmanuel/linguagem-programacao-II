@@ -1,4 +1,4 @@
-package main.java.com.imdcorp.interfaces;
+package com.imdcorp.interfaces;
 
 public interface Functionary {
     /**
@@ -6,5 +6,5 @@ public interface Functionary {
      *
      * @return Value of functionary salary.
      */
-    public Double calculateSalary();
+    Double calculateSalary();
 }

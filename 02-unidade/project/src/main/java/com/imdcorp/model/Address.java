@@ -1,4 +1,4 @@
-package main.java.com.imdcorp.model;
+package com.imdcorp.model;
 
 import java.io.Serializable;
 

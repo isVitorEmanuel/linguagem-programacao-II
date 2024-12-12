@@ -1,4 +1,4 @@
-import main.java.com.imdcorp.services.Operations;
+import com.imdcorp.services.Operations;
 
 import java.util.Scanner;
 

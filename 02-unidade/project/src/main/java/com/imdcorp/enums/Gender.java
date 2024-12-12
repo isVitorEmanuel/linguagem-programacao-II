@@ -1,4 +1,4 @@
-package main.java.com.imdcorp.enums;
+package com.imdcorp.enums;
 
 public enum Gender {
     MALE, FEMI
