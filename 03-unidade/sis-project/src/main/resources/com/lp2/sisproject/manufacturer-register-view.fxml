@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="504.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp2.sisproject.controller.ManufacturerRegisterController">
+   <children>
+      <VBox alignment="CENTER" layoutY="38.0" prefHeight="466.0" prefWidth="157.0" spacing="30.0" style="-fx-background-color: #3A3960;">
+         <children>
+            <Button fx:id="btnRegisterProduct" mnemonicParsing="false" onAction="#toRegisterProduct" prefHeight="35.0" prefWidth="145.0" text="Cadastrar produto" />
+            <Button fx:id="btnProducts" mnemonicParsing="false" onAction="#toProducts" prefHeight="35.0" prefWidth="145.0" text="Visualizar produtos">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnManufacturers" mnemonicParsing="false" onAction="#toManufacturers" prefHeight="35.0" prefWidth="145.0" text="Visualizar fabricantes" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_RIGHT" layoutY="-1.0" prefHeight="40.0" prefWidth="736.0" style="-fx-background-color: #3A3960; -fx-border-color: #FFF; -fx-border-width: 0 0 1 0;">
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+         <children>
+            <Label fx:id="dateLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="130.0" style="-fx-background-color: #FFF; -fx-background-radius: 5;" textOverrun="CLIP" />
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="171.0" layoutY="101.0" prefHeight="40.0" prefWidth="554.0" text="Cadastrar fabricante" textFill="#8a4e4e" textOverrun="CLIP">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+      <VBox alignment="CENTER" layoutX="156.0" layoutY="171.0" prefHeight="200.0" prefWidth="577.0">
+         <children>
+            <Label prefHeight="31.0" prefWidth="531.0" text="Informações gerais" textFill="#8a4e4e" textOverrun="CLIP">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <VBox prefHeight="49.0" prefWidth="539.0" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="41.0" prefWidth="539.0" spacing="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="88.0" text="Nome:" textFill="#555555" />
+                              <TextField fx:id="fieldName" prefHeight="25.0" prefWidth="168.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="118.0" text="CPNJ:" textFill="#555555" />
+                              <TextField fx:id="fieldCNPJ" prefHeight="25.0" prefWidth="168.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="0.0" prefWidth="539.0" spacing="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0" />
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="2.0" top="10.0" />
+               </padding>
+            </VBox>
+            <Label prefHeight="19.0" prefWidth="529.0" text="Localização" textFill="#8a4e4e" textOverrun="CLIP">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="81.0" prefWidth="539.0" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="88.0" text="País:" textFill="#555555" />
+                              <TextField fx:id="fieldCountry" prefHeight="25.0" prefWidth="168.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="88.0" text="Estado:" textFill="#555555" />
+                              <TextField fx:id="fieldState" prefHeight="25.0" prefWidth="168.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="88.0" text="Cidade:" textFill="#555555" />
+                              <TextField fx:id="fieldCity" prefHeight="25.0" prefWidth="168.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="88.0" text="Rua:" textFill="#555555" />
+                              <TextField fx:id="fieldStreet" prefHeight="25.0" prefWidth="168.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="88.0" text="CEP:" textFill="#555555" />
+                              <TextField fx:id="fieldCEP" prefHeight="25.0" prefWidth="168.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="8.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+      <Button fx:id="btnSave" layoutX="421.0" layoutY="424.0" mnemonicParsing="false" onAction="#save" text="Salvar" />
+      <Label fx:id="spanSuccess" layoutX="184.0" layoutY="390.0" prefHeight="25.0" prefWidth="206.0" text="Fabricante adicionado com sucesso." visible="false" />
+   </children>
+</AnchorPane>

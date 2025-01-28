@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp2.sisproject.controller.ProductsRegisterController">
+   <children>
+      <VBox alignment="CENTER" layoutY="38.0" prefHeight="466.0" prefWidth="157.0" spacing="30.0" style="-fx-background-color: #3A3960;">
+         <children>
+            <Button fx:id="btnProducts" mnemonicParsing="false" onAction="#toProducts" prefHeight="35.0" prefWidth="145.0" text="Visualizar produtos">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnRegisterManufacturer" mnemonicParsing="false" onAction="#toRegisterManufacturer" prefHeight="35.0" prefWidth="145.0" text="Cadastrar fabricante" />
+            <Button fx:id="btnManufacturers" mnemonicParsing="false" onAction="#toManufacturers" prefHeight="35.0" prefWidth="145.0" text="Visualizar fabricantes" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_RIGHT" layoutY="-1.0" prefHeight="40.0" prefWidth="736.0" style="-fx-background-color: #3A3960; -fx-border-color: #FFF; -fx-border-width: 0 0 1 0;">
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+         <children>
+            <Label fx:id="dateLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="130.0" style="-fx-background-color: #FFF; -fx-background-radius: 5;" textOverrun="CLIP" />
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="170.0" layoutY="39.0" prefHeight="28.0" prefWidth="554.0" text="Cadastrar produto" textFill="#8a4e4e" textOverrun="CLIP">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+      <VBox alignment="CENTER" layoutX="158.0" layoutY="92.0" prefHeight="327.0" prefWidth="579.0">
+         <children>
+            <Label prefHeight="31.0" prefWidth="539.0" text="Informações gerais" textFill="#8a4e4e" textOverrun="CLIP">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <VBox prefHeight="81.0" prefWidth="539.0" spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="88.0" text="Nome:" textFill="#555555" />
+                              <TextField fx:id="inputName" prefHeight="25.0" prefWidth="168.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="118.0" text="Quantidade:" textFill="#555555" />
+                              <TextField fx:id="inputQuantity" prefHeight="25.0" prefWidth="168.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="88.0" text="Valor:" textFill="#555555" />
+                              <TextField fx:id="inputValue" prefHeight="25.0" prefWidth="168.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="78.0" text="Fabricante: " textFill="#555555" />
+                              <ComboBox fx:id="comboBoxManufac" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <Label prefHeight="19.0" prefWidth="529.0" text="Informações específicas" textFill="#8a4e4e" textOverrun="CLIP">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="192.0" prefWidth="539.0" spacing="10.0">
+               <children>
+                  <HBox fx:id="hbValidity" alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="25.0" prefWidth="547.0" spacing="30.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="115.0" text="Data de Validade: " textFill="#555555" />
+                              <DatePicker fx:id="inputDataValidity" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbManufacture" alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="25.0" prefWidth="547.0" spacing="30.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="115.0" text="Data de Fabricação:" textFill="#555555" />
+                              <DatePicker fx:id="inputDataManufacturer" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbSize" alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="25.0" prefWidth="542.0" spacing="25.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="95.0" text="Tamanho:" textFill="#555555" />
+                              <ComboBox fx:id="comboBoxSize" prefHeight="25.0" prefWidth="145.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbSpecs" alignment="CENTER" fillHeight="false" prefHeight="70.0" prefWidth="539.0" spacing="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="539.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="152.0" text="Especificações Técnicas:" textFill="#555555" />
+                              <TextArea fx:id="textAreaSpec" prefHeight="40.0" prefWidth="177.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="321.0" layoutY="67.0" prefHeight="25.0" prefWidth="252.0">
+         <children>
+            <Button fx:id="btnElectronics" mnemonicParsing="false" onAction="#selectElectronics" text="Eletrônicos" />
+            <Button fx:id="btnClothing" mnemonicParsing="false" onAction="#selectClothing" text="Vestuário" />
+            <Button fx:id="btnFood" mnemonicParsing="false" onAction="#selectFood" text="Alimentos" />
+         </children>
+      </HBox>
+      <Label fx:id="sucessLabel" layoutX="176.0" layoutY="413.0" prefHeight="28.0" prefWidth="539.0" text="Produto cadastrado com sucesso." visible="false" />
+      <Button fx:id="btnSave" layoutX="420.0" layoutY="451.0" mnemonicParsing="false" onAction="#save" text="Salvar" />
+   </children>
+</AnchorPane>

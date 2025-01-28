@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp2.sisproject.controller.ManufacturerInfoController">
+   <children>
+      <Label layoutX="399.0" layoutY="54.0" text="Produtor:" textFill="#8a4e4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="169.0" layoutY="81.0" prefHeight="134.0" prefWidth="535.0">
+         <children>
+            <VBox prefHeight="159.0" prefWidth="535.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="nome" text="Nome:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nomeText" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="cnpj" text="CNPJ:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutY="34.0" prefHeight="466.0" prefWidth="157.0" spacing="30.0" style="-fx-background-color: #3A3960;">
+         <children>
+            <Button fx:id="btnProducts" mnemonicParsing="false" onAction="#toProducts" prefHeight="35.0" prefWidth="145.0" text="Visualizar Produtos" />
+            <Button fx:id="btnRegisterProduct" mnemonicParsing="false" onAction="#toRegisterProduct" prefHeight="35.0" prefWidth="145.0" text="Cadastrar produto">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnRegisterManufacturer" mnemonicParsing="false" onAction="#toRegisterManufacturer" prefHeight="35.0" prefWidth="145.0" text="Cadastrar fabricante" />
+            <Button fx:id="btnManufacturers" mnemonicParsing="false" onAction="#toManufacturers" prefHeight="35.0" prefWidth="145.0" text="Visualizar fabricantes" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="728.0" style="-fx-background-color: #3A3960; -fx-border-color: #FFF; -fx-border-width: 0 0 1 0;">
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+         <children>
+            <Label fx:id="dateLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="130.0" style="-fx-background-color: #FFF; -fx-background-radius: 5;" textOverrun="CLIP" />
+         </children>
+      </VBox>
+      <Label layoutX="398.0" layoutY="215.0" text="Endereço:" textFill="#8a4e4e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="169.0" layoutY="242.0" prefHeight="181.0" prefWidth="535.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="cidade" text="Cidade:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="cidadeText" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="rua" text="Rua:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="ruaText" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="cep" text="CEP:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="cepText" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="estado" text="Estado:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="estadoText" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="pais" text="País:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="paisText" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="btnEdit" layoutX="545.0" layoutY="448.0" mnemonicParsing="false" onAction="#toggleEdit" prefHeight="31.0" prefWidth="61.0" text="Editar" />
+      <Button fx:id="btnSave" layoutX="189.0" layoutY="448.0" mnemonicParsing="false" onAction="#updateManufacturer" prefHeight="31.0" prefWidth="61.0" text="Salvar" />
+      <Button fx:id="btnCancel" layoutX="266.0" layoutY="448.0" mnemonicParsing="false" onAction="#toggleEdit" prefHeight="31.0" prefWidth="83.0" text="Cancelar" />
+      <Button fx:id="btnDelete" layoutX="636.0" layoutY="448.0" mnemonicParsing="false" onAction="#deleteManufacturer" prefHeight="31.0" prefWidth="61.0" text="Deletar" />
+   </children>
+</AnchorPane>
